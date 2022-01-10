@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="178a82fcc37d4d3d8f231e0c94714e8f" Name="Diagram1">
+        <EntityTypeShape EntityType="DbOtelDevExModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblBirim" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblDepartman" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblDurum" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblGorev" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblKasa" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblKur" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblMisafir" Width="1.5" PointX="8" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblOda" Width="1.5" PointX="3" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblPersonel" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblTelefon" Width="1.5" PointX="3" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblUkle" Width="1.5" PointX="5.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblUrun" Width="1.5" PointX="5.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblUrunGrup" Width="1.5" PointX="3" PointY="28.125" IsExpanded="true" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblBirim_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblUrun_TblBirim" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblDepartman_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblGorev_TblDepartman" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblPersonel_TblDepartman" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblGorev_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblKasa_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblKur_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblMisafir_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblOda_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblPersonel_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblTelefon_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblUrun_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblUrun_TblDurum1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblUrunGrup_TblDurum" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblPersonel_TblGorev" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblMisafir_TblUkle" ManuallyRouted="false" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblUrun_TblUrunGrup" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
