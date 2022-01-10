@@ -12,10 +12,10 @@ namespace OtelRezervasyonDevEx.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TblUkle
+    public partial class TblUlke
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TblUkle()
+        public TblUlke()
         {
             this.TblMisafir = new HashSet<TblMisafir>();
         }

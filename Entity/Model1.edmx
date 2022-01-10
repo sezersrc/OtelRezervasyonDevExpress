@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbOtelDevExModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbOtelDevExModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -124,7 +124,7 @@
           <Property Name="TelefonNo" Type="nvarchar" MaxLength="20" />
           <Property Name="Durum" Type="int" />
         </EntityType>
-        <EntityType Name="TblUkle">
+        <EntityType Name="TblUlke">
           <Key>
             <PropertyRef Name="UlkeID" />
           </Key>
@@ -237,10 +237,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TblMisafir_TblUkle">
-          <End Role="TblUkle" Type="Self.TblUkle" Multiplicity="0..1" />
+          <End Role="TblUlke" Type="Self.TblUlke" Multiplicity="0..1" />
           <End Role="TblMisafir" Type="Self.TblMisafir" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="TblUkle">
+            <Principal Role="TblUlke">
               <PropertyRef Name="UlkeID" />
             </Principal>
             <Dependent Role="TblMisafir">
@@ -380,7 +380,7 @@
           <EntitySet Name="TblOda" EntityType="Self.TblOda" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTelefon" EntityType="Self.TblTelefon" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblUkle" EntityType="Self.TblUkle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblUlke" EntityType="Self.TblUlke" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblUrun" EntityType="Self.TblUrun" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblUrunGrup" EntityType="Self.TblUrunGrup" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblBirim_TblDurum" Association="Self.FK_TblBirim_TblDurum">
@@ -412,7 +412,7 @@
             <End Role="TblMisafir" EntitySet="TblMisafir" />
           </AssociationSet>
           <AssociationSet Name="FK_TblMisafir_TblUkle" Association="Self.FK_TblMisafir_TblUkle">
-            <End Role="TblUkle" EntitySet="TblUkle" />
+            <End Role="TblUlke" EntitySet="TblUlke" />
             <End Role="TblMisafir" EntitySet="TblMisafir" />
           </AssociationSet>
           <AssociationSet Name="FK_TblOda_TblDurum" Association="Self.FK_TblOda_TblDurum">
@@ -456,8 +456,7 @@
             <End Role="TblUrunGrup" EntitySet="TblUrunGrup" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbOtelDevExModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -564,7 +563,7 @@
           <Property Name="Ulke" Type="Int32" />
           <Property Name="Durum" Type="Int32" />
           <NavigationProperty Name="TblDurum" Relationship="Self.FK_TblMisafir_TblDurum" FromRole="TblMisafir" ToRole="TblDurum" />
-          <NavigationProperty Name="TblUkle" Relationship="Self.FK_TblMisafir_TblUkle" FromRole="TblMisafir" ToRole="TblUkle" />
+          <NavigationProperty Name="TblUlke" Relationship="DbOtelDevExModel.FK_TblMisafir_TblUkle" FromRole="TblMisafir" ToRole="TblUlke" />
         </EntityType>
         <EntityType Name="TblOda">
           <Key>
@@ -608,14 +607,6 @@
           <Property Name="TelefonNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Durum" Type="Int32" />
           <NavigationProperty Name="TblDurum" Relationship="Self.FK_TblTelefon_TblDurum" FromRole="TblTelefon" ToRole="TblDurum" />
-        </EntityType>
-        <EntityType Name="TblUkle">
-          <Key>
-            <PropertyRef Name="UlkeID" />
-          </Key>
-          <Property Name="UlkeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UlkeAd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TblMisafir" Relationship="Self.FK_TblMisafir_TblUkle" FromRole="TblUkle" ToRole="TblMisafir" />
         </EntityType>
         <EntityType Name="TblUrun">
           <Key>
@@ -836,18 +827,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TblMisafir_TblUkle">
-          <End Role="TblUkle" Type="Self.TblUkle" Multiplicity="0..1" />
-          <End Role="TblMisafir" Type="Self.TblMisafir" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TblUkle">
-              <PropertyRef Name="UlkeID" />
-            </Principal>
-            <Dependent Role="TblMisafir">
-              <PropertyRef Name="Ulke" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_TblUrun_TblUrunGrup">
           <End Role="TblUrunGrup" Type="Self.TblUrunGrup" Multiplicity="0..1" />
           <End Role="TblUrun" Type="Self.TblUrun" Multiplicity="*" />
@@ -872,7 +851,6 @@
           <EntitySet Name="TblOda" EntityType="Self.TblOda" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" />
           <EntitySet Name="TblTelefon" EntityType="Self.TblTelefon" />
-          <EntitySet Name="TblUkle" EntityType="Self.TblUkle" />
           <EntitySet Name="TblUrun" EntityType="Self.TblUrun" />
           <EntitySet Name="TblUrunGrup" EntityType="Self.TblUrunGrup" />
           <AssociationSet Name="FK_TblBirim_TblDurum" Association="Self.FK_TblBirim_TblDurum">
@@ -939,15 +917,36 @@
             <End Role="TblGorev" EntitySet="TblGorev" />
             <End Role="TblPersonel" EntitySet="TblPersonel" />
           </AssociationSet>
-          <AssociationSet Name="FK_TblMisafir_TblUkle" Association="Self.FK_TblMisafir_TblUkle">
-            <End Role="TblUkle" EntitySet="TblUkle" />
-            <End Role="TblMisafir" EntitySet="TblMisafir" />
-          </AssociationSet>
           <AssociationSet Name="FK_TblUrun_TblUrunGrup" Association="Self.FK_TblUrun_TblUrunGrup">
             <End Role="TblUrunGrup" EntitySet="TblUrunGrup" />
             <End Role="TblUrun" EntitySet="TblUrun" />
           </AssociationSet>
+          <EntitySet Name="TblUlke" EntityType="DbOtelDevExModel.TblUlke" />
+          <AssociationSet Name="FK_TblMisafir_TblUkle" Association="DbOtelDevExModel.FK_TblMisafir_TblUkle">
+            <End Role="TblUlke" EntitySet="TblUlke" />
+            <End Role="TblMisafir" EntitySet="TblMisafir" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="TblUlke">
+          <Key>
+            <PropertyRef Name="UlkeID" />
+          </Key>
+          <Property Name="UlkeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UlkeAd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TblMisafir" Relationship="DbOtelDevExModel.FK_TblMisafir_TblUkle" FromRole="TblUlke" ToRole="TblMisafir" />
+        </EntityType>
+        <Association Name="FK_TblMisafir_TblUkle">
+          <End Type="DbOtelDevExModel.TblUlke" Role="TblUlke" Multiplicity="0..1" />
+          <End Type="DbOtelDevExModel.TblMisafir" Role="TblMisafir" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblUlke">
+              <PropertyRef Name="UlkeID" />
+            </Principal>
+            <Dependent Role="TblMisafir">
+              <PropertyRef Name="Ulke" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1084,14 +1083,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TblUkle">
-            <EntityTypeMapping TypeName="DbOtelDevExModel.TblUkle">
-              <MappingFragment StoreEntitySet="TblUkle">
-                <ScalarProperty Name="UlkeID" ColumnName="UlkeID" />
-                <ScalarProperty Name="UlkeAd" ColumnName="UlkeAd" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblUrun">
             <EntityTypeMapping TypeName="DbOtelDevExModel.TblUrun">
               <MappingFragment StoreEntitySet="TblUrun">
@@ -1112,6 +1103,14 @@
                 <ScalarProperty Name="UrunGrupID" ColumnName="UrunGrupID" />
                 <ScalarProperty Name="UrunGruoAd" ColumnName="UrunGruoAd" />
                 <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUlke">
+            <EntityTypeMapping TypeName="DbOtelDevExModel.TblUlke">
+              <MappingFragment StoreEntitySet="TblUlke">
+                <ScalarProperty Name="UlkeAd" ColumnName="UlkeAd" />
+                <ScalarProperty Name="UlkeID" ColumnName="UlkeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

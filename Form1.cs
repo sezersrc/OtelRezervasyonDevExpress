@@ -54,5 +54,17 @@ namespace OtelRezervasyonDevEx
             FrmOda fr = new FrmOda();
             fr.Show();
         }
+
+        private void BtnPersonelTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmPersonel fr = new FrmPersonel();
+            fr.Show();
+        }
+
+        private void BtnTelefonTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmTelefon fr = new FrmTelefon();
+            fr.Show();
+        }
     }
 }

@@ -27,6 +27,6 @@ namespace OtelRezervasyonDevEx.Entity
         public Nullable<int> Durum { get; set; }
     
         public virtual TblDurum TblDurum { get; set; }
-        public virtual TblUkle TblUkle { get; set; }
+        public virtual TblUlke TblUlke { get; set; }
     }
 }
