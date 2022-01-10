@@ -66,5 +66,11 @@ namespace OtelRezervasyonDevEx
             FrmTelefon fr = new FrmTelefon();
             fr.Show();
         }
+
+        private void BtnUlkeTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUlke fr = new FrmUlke();
+            fr.Show();
+        }
     }
 }

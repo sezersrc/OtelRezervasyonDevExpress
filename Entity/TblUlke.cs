@@ -22,7 +22,9 @@ namespace OtelRezervasyonDevEx.Entity
     
         public int UlkeID { get; set; }
         public string UlkeAd { get; set; }
+        public Nullable<int> Durum { get; set; }
     
+        public virtual TblDurum TblDurum { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblMisafir> TblMisafir { get; set; }
     }

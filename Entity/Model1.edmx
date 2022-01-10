@@ -130,6 +130,7 @@
           </Key>
           <Property Name="UlkeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UlkeAd" Type="nvarchar" MaxLength="30" />
+          <Property Name="Durum" Type="int" />
         </EntityType>
         <EntityType Name="TblUrun">
           <Key>
@@ -308,6 +309,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TblUlke_TblDurum">
+          <End Role="TblDurum" Type="Self.TblDurum" Multiplicity="0..1" />
+          <End Role="TblUlke" Type="Self.TblUlke" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblDurum">
+              <PropertyRef Name="DurumID" />
+            </Principal>
+            <Dependent Role="TblUlke">
+              <PropertyRef Name="Durum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TblUrun_TblBirim">
           <End Role="TblBirim" Type="Self.TblBirim" Multiplicity="0..1" />
           <End Role="TblUrun" Type="Self.TblUrun" Multiplicity="*" />
@@ -435,6 +448,10 @@
             <End Role="TblDurum" EntitySet="TblDurum" />
             <End Role="TblTelefon" EntitySet="TblTelefon" />
           </AssociationSet>
+          <AssociationSet Name="FK_TblUlke_TblDurum" Association="Self.FK_TblUlke_TblDurum">
+            <End Role="TblDurum" EntitySet="TblDurum" />
+            <End Role="TblUlke" EntitySet="TblUlke" />
+          </AssociationSet>
           <AssociationSet Name="FK_TblUrun_TblBirim" Association="Self.FK_TblUrun_TblBirim">
             <End Role="TblBirim" EntitySet="TblBirim" />
             <End Role="TblUrun" EntitySet="TblUrun" />
@@ -460,16 +477,6 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbOtelDevExModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="TblBirim">
           <Key>
             <PropertyRef Name="BirimID" />
@@ -510,6 +517,7 @@
           <NavigationProperty Name="TblUrun" Relationship="Self.FK_TblUrun_TblDurum" FromRole="TblDurum" ToRole="TblUrun" />
           <NavigationProperty Name="TblUrun1" Relationship="Self.FK_TblUrun_TblDurum1" FromRole="TblDurum" ToRole="TblUrun" />
           <NavigationProperty Name="TblUrunGrup" Relationship="Self.FK_TblUrunGrup_TblDurum" FromRole="TblDurum" ToRole="TblUrunGrup" />
+          <NavigationProperty Name="TblUlke" Relationship="DbOtelDevExModel.FK_TblUlke_TblDurum" FromRole="TblDurum" ToRole="TblUlke" />
         </EntityType>
         <EntityType Name="TblGorev">
           <Key>
@@ -840,7 +848,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DbOtelDevExEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TblBirim" EntityType="Self.TblBirim" />
           <EntitySet Name="TblDepartman" EntityType="Self.TblDepartman" />
           <EntitySet Name="TblDurum" EntityType="Self.TblDurum" />
@@ -921,20 +928,49 @@
             <End Role="TblUrunGrup" EntitySet="TblUrunGrup" />
             <End Role="TblUrun" EntitySet="TblUrun" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="DbOtelDevExModel.sysdiagrams" />
           <EntitySet Name="TblUlke" EntityType="DbOtelDevExModel.TblUlke" />
+          <AssociationSet Name="FK_TblUlke_TblDurum" Association="DbOtelDevExModel.FK_TblUlke_TblDurum">
+            <End Role="TblDurum" EntitySet="TblDurum" />
+            <End Role="TblUlke" EntitySet="TblUlke" />
+          </AssociationSet>
           <AssociationSet Name="FK_TblMisafir_TblUkle" Association="DbOtelDevExModel.FK_TblMisafir_TblUkle">
             <End Role="TblUlke" EntitySet="TblUlke" />
             <End Role="TblMisafir" EntitySet="TblMisafir" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TblUlke">
           <Key>
             <PropertyRef Name="UlkeID" />
           </Key>
           <Property Name="UlkeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UlkeAd" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Int32" />
+          <NavigationProperty Name="TblDurum" Relationship="DbOtelDevExModel.FK_TblUlke_TblDurum" FromRole="TblUlke" ToRole="TblDurum" />
           <NavigationProperty Name="TblMisafir" Relationship="DbOtelDevExModel.FK_TblMisafir_TblUkle" FromRole="TblUlke" ToRole="TblMisafir" />
         </EntityType>
+        <Association Name="FK_TblUlke_TblDurum">
+          <End Type="DbOtelDevExModel.TblDurum" Role="TblDurum" Multiplicity="0..1" />
+          <End Type="DbOtelDevExModel.TblUlke" Role="TblUlke" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblDurum">
+              <PropertyRef Name="DurumID" />
+            </Principal>
+            <Dependent Role="TblUlke">
+              <PropertyRef Name="Durum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TblMisafir_TblUkle">
           <End Type="DbOtelDevExModel.TblUlke" Role="TblUlke" Multiplicity="0..1" />
           <End Type="DbOtelDevExModel.TblMisafir" Role="TblMisafir" Multiplicity="*" />
@@ -953,17 +989,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DbOtelDevExModelStoreContainer" CdmEntityContainer="DbOtelDevExEntities">
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DbOtelDevExModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblBirim">
             <EntityTypeMapping TypeName="DbOtelDevExModel.TblBirim">
               <MappingFragment StoreEntitySet="TblBirim">
@@ -1106,9 +1131,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DbOtelDevExModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TblUlke">
             <EntityTypeMapping TypeName="DbOtelDevExModel.TblUlke">
               <MappingFragment StoreEntitySet="TblUlke">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="UlkeAd" ColumnName="UlkeAd" />
                 <ScalarProperty Name="UlkeID" ColumnName="UlkeID" />
               </MappingFragment>

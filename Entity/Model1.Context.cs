@@ -25,7 +25,6 @@ namespace OtelRezervasyonDevEx.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblBirim> TblBirim { get; set; }
         public virtual DbSet<TblDepartman> TblDepartman { get; set; }
         public virtual DbSet<TblDurum> TblDurum { get; set; }
@@ -38,6 +37,7 @@ namespace OtelRezervasyonDevEx.Entity
         public virtual DbSet<TblTelefon> TblTelefon { get; set; }
         public virtual DbSet<TblUrun> TblUrun { get; set; }
         public virtual DbSet<TblUrunGrup> TblUrunGrup { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblUlke> TblUlke { get; set; }
     }
 }
