@@ -47,5 +47,11 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
                 XtraMessageBox.Show("Bilgiler girilirken hata oluştu tekrar kontrol ediniz ");
             }
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+            // Test
+        }
     }
 }

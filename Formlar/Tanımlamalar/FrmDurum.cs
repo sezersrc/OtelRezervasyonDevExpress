@@ -44,5 +44,10 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
         {
             this.Close();
         }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // test
+        }
     }
 }

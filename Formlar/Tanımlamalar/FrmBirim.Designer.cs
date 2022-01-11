@@ -50,14 +50,14 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // 
             this.gridControl1.DataSource = this.bindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEditDurum});
-            this.gridControl1.Size = new System.Drawing.Size(494, 421);
+            this.gridControl1.Size = new System.Drawing.Size(659, 518);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -68,7 +68,6 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
             this.gridColumn1});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
@@ -80,22 +79,22 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.gridColumn2.Caption = "Birim Adı";
             this.gridColumn2.DisplayFormat.FormatString = "BirimAd";
             this.gridColumn2.FieldName = "BirimAd";
-            this.gridColumn2.MinWidth = 19;
+            this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 70;
+            this.gridColumn2.Width = 93;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Durum Adı";
             this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEditDurum;
             this.gridColumn1.FieldName = "Durum";
-            this.gridColumn1.MinWidth = 19;
+            this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 70;
+            this.gridColumn1.Width = 93;
             // 
             // repositoryItemLookUpEditDurum
             // 
@@ -109,31 +108,35 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.silToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
+            this.vazgeçToolStripMenuItem.Click += new System.EventHandler(this.vazgeçToolStripMenuItem_Click);
             // 
             // FrmBirim
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 421);
+            this.ClientSize = new System.Drawing.Size(659, 518);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.gridControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBirim";

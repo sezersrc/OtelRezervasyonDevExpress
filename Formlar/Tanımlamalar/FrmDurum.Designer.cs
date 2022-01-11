@@ -48,35 +48,37 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
             this.gridControl1.DataSource = this.bindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(369, 336);
+            this.gridControl1.Size = new System.Drawing.Size(492, 414);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.durumuSilToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(134, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // durumuSilToolStripMenuItem
             // 
             this.durumuSilToolStripMenuItem.Name = "durumuSilToolStripMenuItem";
-            this.durumuSilToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.durumuSilToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.durumuSilToolStripMenuItem.Text = "Durumu Sil";
             this.durumuSilToolStripMenuItem.Click += new System.EventHandler(this.durumuSilToolStripMenuItem_Click);
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
             this.vazgeçToolStripMenuItem.Click += new System.EventHandler(this.vazgeçToolStripMenuItem_Click);
             // 
@@ -84,7 +86,6 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
@@ -94,20 +95,20 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // gridColumn1
             // 
             this.gridColumn1.FieldName = "DurumAd";
-            this.gridColumn1.MinWidth = 19;
+            this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 70;
+            this.gridColumn1.Width = 93;
             // 
             // FrmDurum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 336);
+            this.ClientSize = new System.Drawing.Size(492, 414);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.gridControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDurum";

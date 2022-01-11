@@ -31,19 +31,19 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
         {
             this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEditDurum = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vazgeçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditDurum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,14 +51,14 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // 
             this.gridControl1.DataSource = this.bindingSource1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEditDurum});
-            this.gridControl1.Size = new System.Drawing.Size(494, 421);
+            this.gridControl1.Size = new System.Drawing.Size(659, 518);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -69,7 +69,6 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn1});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
@@ -81,22 +80,32 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.gridColumn2.Caption = "Departman Adı";
             this.gridColumn2.DisplayFormat.FormatString = "BirimAd";
             this.gridColumn2.FieldName = "DepartmanAd";
-            this.gridColumn2.MinWidth = 19;
+            this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 70;
+            this.gridColumn2.Width = 93;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Telefon";
+            this.gridColumn3.FieldName = "Telefon";
+            this.gridColumn3.MinWidth = 27;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 100;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Durum Adı";
             this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEditDurum;
             this.gridColumn1.FieldName = "Durum";
-            this.gridColumn1.MinWidth = 19;
+            this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 70;
+            this.gridColumn1.Width = 93;
             // 
             // repositoryItemLookUpEditDurum
             // 
@@ -110,39 +119,34 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.silToolStripMenuItem,
             this.vazgeçToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(111, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.silToolStripMenuItem.Text = "Sil";
             // 
             // vazgeçToolStripMenuItem
             // 
             this.vazgeçToolStripMenuItem.Name = "vazgeçToolStripMenuItem";
-            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.vazgeçToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.vazgeçToolStripMenuItem.Text = "Vazgeç";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Telefon";
-            this.gridColumn3.FieldName = "Telefon";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 0;
             // 
             // FrmDepartman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 421);
+            this.ClientSize = new System.Drawing.Size(659, 518);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.gridControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDepartman";
@@ -150,9 +154,9 @@ namespace OtelRezervasyonDevEx.Formlar.Tanımlamalar
             this.Text = "Departman Tanımları";
             this.Load += new System.EventHandler(this.FrmDepartman_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditDurum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 

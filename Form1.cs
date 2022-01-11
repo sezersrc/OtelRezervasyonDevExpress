@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using OtelRezervasyonDevEx.Formlar.Personel;
 using OtelRezervasyonDevEx.Formlar.Tanımlamalar;
 
 namespace OtelRezervasyonDevEx
@@ -71,6 +72,26 @@ namespace OtelRezervasyonDevEx
         {
             FrmUlke fr = new FrmUlke();
             fr.Show();
+        }
+
+        private void BtnUrunGrupTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunGrup fr = new FrmUrunGrup();
+            fr.Show();
+        }
+
+        private void BtnPersonelKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmPersonelKarti fr = new FrmPersonelKarti();
+            fr.Show();
+        }
+
+        private void BtnPersonelListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmPersonelListesi fr = new FrmPersonelListesi();
+            fr.MdiParent = this;
+            fr.Show();
+
         }
     }
 }

@@ -114,6 +114,10 @@
           <Property Name="Gorev" Type="int" />
           <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
           <Property Name="Durum" Type="int" />
+          <Property Name="KimlikOn" Type="nvarchar" MaxLength="250" />
+          <Property Name="KimlikArka" Type="nvarchar" MaxLength="250" />
+          <Property Name="Yetki" Type="char" MaxLength="1" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="TblTelefon">
           <Key>
@@ -605,6 +609,10 @@
           <NavigationProperty Name="TblDepartman" Relationship="Self.FK_TblPersonel_TblDepartman" FromRole="TblPersonel" ToRole="TblDepartman" />
           <NavigationProperty Name="TblDurum" Relationship="Self.FK_TblPersonel_TblDurum" FromRole="TblPersonel" ToRole="TblDurum" />
           <NavigationProperty Name="TblGorev" Relationship="Self.FK_TblPersonel_TblGorev" FromRole="TblPersonel" ToRole="TblGorev" />
+          <Property Name="KimlikOn" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="KimlikArka" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Yetki" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblTelefon">
           <Key>
@@ -1083,6 +1091,10 @@
           <EntitySetMapping Name="TblPersonel">
             <EntityTypeMapping TypeName="DbOtelDevExModel.TblPersonel">
               <MappingFragment StoreEntitySet="TblPersonel">
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+                <ScalarProperty Name="KimlikArka" ColumnName="KimlikArka" />
+                <ScalarProperty Name="KimlikOn" ColumnName="KimlikOn" />
                 <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="TC" ColumnName="TC" />
