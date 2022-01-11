@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DbOtelDevExModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+          <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -85,6 +100,8 @@
           <Property Name="KimlikFoto2" Type="nvarchar" MaxLength="100" />
           <Property Name="Ulke" Type="int" />
           <Property Name="Durum" Type="int" />
+          <Property Name="Sehir" Type="nvarchar" MaxLength="50" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TblOda">
           <Key>
@@ -386,6 +403,8 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DbOtelDevExModelStoreContainer">
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblBirim" EntityType="Self.TblBirim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblDepartman" EntityType="Self.TblDepartman" Schema="dbo" store:Type="Tables" />
@@ -576,6 +595,8 @@
           <Property Name="Durum" Type="Int32" />
           <NavigationProperty Name="TblDurum" Relationship="Self.FK_TblMisafir_TblDurum" FromRole="TblMisafir" ToRole="TblDurum" />
           <NavigationProperty Name="TblUlke" Relationship="DbOtelDevExModel.FK_TblMisafir_TblUkle" FromRole="TblMisafir" ToRole="TblUlke" />
+          <Property Name="Sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblOda">
           <Key>
@@ -946,6 +967,8 @@
             <End Role="TblUlke" EntitySet="TblUlke" />
             <End Role="TblMisafir" EntitySet="TblMisafir" />
           </AssociationSet>
+          <EntitySet Name="ilceler" EntityType="DbOtelDevExModel.ilceler" />
+          <EntitySet Name="iller" EntityType="DbOtelDevExModel.iller" />
         </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -991,6 +1014,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1061,6 +1099,8 @@
           <EntitySetMapping Name="TblMisafir">
             <EntityTypeMapping TypeName="DbOtelDevExModel.TblMisafir">
               <MappingFragment StoreEntitySet="TblMisafir">
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="Sehir" ColumnName="Sehir" />
                 <ScalarProperty Name="MisafirID" ColumnName="MisafirID" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="TC" ColumnName="TC" />
@@ -1160,6 +1200,23 @@
                 <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="UlkeAd" ColumnName="UlkeAd" />
                 <ScalarProperty Name="UlkeID" ColumnName="UlkeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilceler">
+            <EntityTypeMapping TypeName="DbOtelDevExModel.ilceler">
+              <MappingFragment StoreEntitySet="ilceler">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iller">
+            <EntityTypeMapping TypeName="DbOtelDevExModel.iller">
+              <MappingFragment StoreEntitySet="iller">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

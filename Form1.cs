@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using OtelRezervasyonDevEx.Formlar.Misafir;
 using OtelRezervasyonDevEx.Formlar.Personel;
 using OtelRezervasyonDevEx.Formlar.Tanımlamalar;
 
@@ -92,6 +93,12 @@ namespace OtelRezervasyonDevEx
             fr.MdiParent = this;
             fr.Show();
 
+        }
+
+        private void BtnMisafirKArti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmMisafirKarti fr = new FrmMisafirKarti();
+            fr.Show();
         }
     }
 }

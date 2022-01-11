@@ -39,5 +39,7 @@ namespace OtelRezervasyonDevEx.Entity
         public virtual DbSet<TblUrunGrup> TblUrunGrup { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblUlke> TblUlke { get; set; }
+        public virtual DbSet<ilceler> ilceler { get; set; }
+        public virtual DbSet<iller> iller { get; set; }
     }
 }

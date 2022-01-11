@@ -60,6 +60,7 @@ namespace OtelRezervasyonDevEx
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.BtnMisafirKArti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -85,10 +86,11 @@ namespace OtelRezervasyonDevEx
             this.BtnUlkeTanimlari,
             this.BtnUrunGrupTanimlari,
             this.BtnPersonelListesi,
-            this.BtnPersonelKarti});
+            this.BtnPersonelKarti,
+            this.BtnMisafirKArti});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 329;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -252,6 +254,7 @@ namespace OtelRezervasyonDevEx
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.BtnMisafirKArti);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage3
@@ -315,6 +318,15 @@ namespace OtelRezervasyonDevEx
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // BtnMisafirKArti
+            // 
+            this.BtnMisafirKArti.Caption = "Misafir Kartı";
+            this.BtnMisafirKArti.Id = 16;
+            this.BtnMisafirKArti.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnMisafirKArti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnMisafirKArti.Name = "BtnMisafirKArti";
+            this.BtnMisafirKArti.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMisafirKArti_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -366,6 +378,7 @@ namespace OtelRezervasyonDevEx
         private DevExpress.XtraBars.BarButtonItem BtnPersonelListesi;
         private DevExpress.XtraBars.BarButtonItem BtnPersonelKarti;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem BtnMisafirKArti;
     }
 }
 

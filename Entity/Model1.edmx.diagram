@@ -38,6 +38,8 @@
         <EntityTypeShape EntityType="DbOtelDevExModel.TblUlke" Width="1.5" PointX="3.375" PointY="18" />
         <AssociationConnector Association="DbOtelDevExModel.FK_TblUlke_TblDurum" />
         <AssociationConnector Association="DbOtelDevExModel.FK_TblMisafir_TblUkle" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.ilceler" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.iller" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
