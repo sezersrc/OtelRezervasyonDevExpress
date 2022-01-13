@@ -2,6 +2,7 @@
 using OtelRezervasyonDevEx.Formlar.Misafir;
 using OtelRezervasyonDevEx.Formlar.Personel;
 using OtelRezervasyonDevEx.Formlar.Tanımlamalar;
+using OtelRezervasyonDevEx.Formlar.Urun;
 
 namespace OtelRezervasyonDevEx
 {
@@ -98,6 +99,48 @@ namespace OtelRezervasyonDevEx
         private void BtnMisafirKArti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmMisafirKarti fr = new FrmMisafirKarti();
+            fr.Show();
+        }
+
+        private void BtnMisafirListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmMisafirListesi fr = new FrmMisafirListesi();
+            fr.MdiParent = this;
+            fr.Show();
+
+        }
+
+        private void BtnUrunListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunListesi fr = new FrmUrunListesi();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnUrunKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunKarti fr = new FrmUrunKarti();
+            fr.Show();
+
+        }
+
+        private void BtnUrunGirisHareket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunGirisHareketleri fr = new FrmUrunGirisHareketleri();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunCikisHareketleri fr = new FrmUrunCikisHareketleri();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnYeniUrunHareketi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUrunHareketTanimi fr = new FrmUrunHareketTanimi();
             fr.Show();
         }
     }

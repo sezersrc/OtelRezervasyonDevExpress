@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using DevExpress.DataAccess;
 using OtelRezervasyonDevEx.Entity;
-using Expression = DevExpress.DataAccess.Expression;
 
 namespace OtelRezervasyonDevEx.Repositories
 {

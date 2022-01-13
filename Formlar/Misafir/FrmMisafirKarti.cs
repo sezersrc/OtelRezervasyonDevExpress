@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using OtelRezervasyonDevEx.Entity;
@@ -21,8 +16,33 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
         }
 
         private DbOtelDevExEntities db = new DbOtelDevExEntities();
+        Repository<TblMisafir> repo = new Repository<TblMisafir>();
+        TblMisafir t = new TblMisafir();
+        private string resim1, resim2;
+        public int id;
         private void FrmMisafirKarti_Load(object sender, EventArgs e)
         {
+            TxtAdSoyad.Text = id.ToString();
+            // Güncellenecek Kart Bilgileri
+            if (id != 0)
+            {
+                var misafir = repo.Find(x => x.MisafirID == id);
+                TxtAdSoyad.Text = misafir.AdSoyad;
+                TxtTcKimlikNo.Text = misafir.TC;
+                TxtAdres.Text = misafir.Adres;
+                TxtTelefon.Text = misafir.Telefon;
+                TxtEmail.Text = misafir.Mail;
+                txtAciklama.Text = misafir.Aciklama;
+                pictureEditKimlikOn.Image = Image.FromFile(misafir.KimlikFoto1);
+                pictureEditKimlikArka.Image = Image.FromFile(misafir.KimlikFoto2);
+                resim1 = misafir.KimlikFoto1;
+                resim2 = misafir.KimlikFoto2;
+                lookUpEditil.EditValue = misafir.Sehir;
+                lookUpEditUlke.EditValue = misafir.Ulke;
+                lookUpEditilce.EditValue = misafir.ilce;
+
+            }
+
             // Ülke Listesi
             lookUpEditUlke.Properties.DataSource = (from x in db.TblUlke
                                                     select new
@@ -55,7 +75,7 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
                                                     }).Where(y => y.Şehir == secilen).ToList();
         }
 
-        private string resim1, resim2;
+        
 
         private void pictureEditKimlikOn_EditValueChanged(object sender, EventArgs e)
         {
@@ -67,10 +87,28 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
             resim2 = pictureEditKimlikArka.GetLoadedImageLocation().ToString();
         }
 
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            var deger = repo.Find(x => x.MisafirID == id);
+            deger.AdSoyad = TxtAdSoyad.Text;
+            deger.TC = TxtTcKimlikNo.Text;
+            deger.Mail = TxtEmail.Text;
+            deger.Adres = TxtAdres.Text;
+            deger.Telefon = TxtTelefon.Text;
+            deger.Aciklama = txtAciklama.Text;
+            deger.KimlikFoto1 = resim1;
+            deger.KimlikFoto2 = resim2;
+            deger.Ulke = int.Parse(lookUpEditUlke.EditValue.ToString());
+            deger.Sehir = int.Parse(lookUpEditil.EditValue.ToString());
+            deger.ilce = int.Parse(lookUpEditilce.EditValue.ToString());
+            deger.Durum = 1;
+            repo.TUpdate(deger);
+            XtraMessageBox.Show("Misafir Başarılı bir şekilde güncellenmiştir", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            Repository<TblMisafir> repo = new Repository<TblMisafir>();
-            TblMisafir t = new TblMisafir();
+           
             t.AdSoyad = TxtAdSoyad.Text;
             t.TC = TxtTcKimlikNo.Text;
             t.Telefon = TxtTelefon.Text;
@@ -78,8 +116,8 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
             t.Adres = TxtAdres.Text;
             t.Aciklama = txtAciklama.Text;
             t.Durum = 1;
-            t.Sehir = lookUpEditil.Text;
-            t.ilce = lookUpEditil.Text;
+            t.Sehir = int.Parse(lookUpEditil.EditValue.ToString());
+            t.ilce = int.Parse(lookUpEditilce.EditValue.ToString());
             t.Ulke = int.Parse(lookUpEditUlke.EditValue.ToString());
             t.KimlikFoto1 = resim1;
             t.KimlikFoto2 = resim2;

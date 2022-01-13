@@ -25,10 +25,12 @@ namespace OtelRezervasyonDevEx.Entity
         public string KimlikFoto2 { get; set; }
         public Nullable<int> Ulke { get; set; }
         public Nullable<int> Durum { get; set; }
-        public string Sehir { get; set; }
-        public string ilce { get; set; }
+        public Nullable<int> Sehir { get; set; }
+        public Nullable<int> ilce { get; set; }
     
         public virtual TblDurum TblDurum { get; set; }
         public virtual TblUlke TblUlke { get; set; }
+        public virtual ilceler ilceler { get; set; }
+        public virtual iller iller { get; set; }
     }
 }

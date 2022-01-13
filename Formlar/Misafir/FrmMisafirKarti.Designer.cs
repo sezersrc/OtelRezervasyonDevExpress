@@ -313,6 +313,7 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
             this.BtnGuncelle.Size = new System.Drawing.Size(143, 50);
             this.BtnGuncelle.TabIndex = 2;
             this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnKaydet
             // 
