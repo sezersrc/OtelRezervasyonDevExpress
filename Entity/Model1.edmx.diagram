@@ -45,6 +45,10 @@
         <AssociationConnector Association="DbOtelDevExModel.FK_TblMisafir_iller" />
         <EntityTypeShape EntityType="DbOtelDevExModel.TblUrunHareket" Width="1.5" PointX="7.5" PointY="16.875" />
         <AssociationConnector Association="DbOtelDevExModel.FK_TblUrunHareket_TblUrun" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblRezervasyon" Width="1.5" PointX="12.125" PointY="17.625" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblDurum" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblMisafir" />
+        <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblOda" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -108,6 +108,9 @@
     <Compile Include="Entity\TblPersonel.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TblRezervasyon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TblTelefon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
