@@ -41,22 +41,22 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.lookUpEditMisafir = new DevExpress.XtraEditors.LookUpEdit();
+            this.dateEditGiris = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditCikis = new DevExpress.XtraEditors.DateEdit();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.lookUpEditilce = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEditOdaSec = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtTelefon = new DevExpress.XtraEditors.LabelControl();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.TxtRezAdSoyad = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEditDurum = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -73,13 +73,13 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMisafir.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditilce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditOdaSec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -87,9 +87,9 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRezAdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDurum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -114,7 +114,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(300, 59);
+            this.labelControl6.Location = new System.Drawing.Point(292, 59);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(42, 16);
             this.labelControl6.TabIndex = 17;
@@ -206,7 +206,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.lookUpEdit1);
+            this.groupControl1.Controls.Add(this.lookUpEditMisafir);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.pictureEdit1);
             this.groupControl1.Location = new System.Drawing.Point(-3, 0);
@@ -215,42 +215,42 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.groupControl1.Size = new System.Drawing.Size(493, 58);
             this.groupControl1.TabIndex = 7;
             // 
-            // lookUpEdit1
+            // lookUpEditMisafir
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(125, 12);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEditMisafir.Location = new System.Drawing.Point(125, 12);
+            this.lookUpEditMisafir.Name = "lookUpEditMisafir";
+            this.lookUpEditMisafir.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.DisplayMember = "UlkeAd";
-            this.lookUpEdit1.Properties.NullText = "Ülke Seçiniz";
-            this.lookUpEdit1.Properties.ValueMember = "UlkeID";
-            this.lookUpEdit1.Size = new System.Drawing.Size(347, 22);
-            this.lookUpEdit1.TabIndex = 19;
+            this.lookUpEditMisafir.Properties.DisplayMember = "AdSoyad";
+            this.lookUpEditMisafir.Properties.NullText = "Misafir Seçiniz";
+            this.lookUpEditMisafir.Properties.ValueMember = "MisafirID";
+            this.lookUpEditMisafir.Size = new System.Drawing.Size(347, 22);
+            this.lookUpEditMisafir.TabIndex = 19;
             // 
-            // dateEdit1
+            // dateEditGiris
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(130, 25);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditGiris.EditValue = null;
+            this.dateEditGiris.Location = new System.Drawing.Point(130, 25);
+            this.dateEditGiris.Name = "dateEditGiris";
+            this.dateEditGiris.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditGiris.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(116, 22);
-            this.dateEdit1.TabIndex = 20;
-            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
+            this.dateEditGiris.Size = new System.Drawing.Size(116, 22);
+            this.dateEditGiris.TabIndex = 20;
+            this.dateEditGiris.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
             // 
-            // dateEdit2
+            // dateEditCikis
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(347, 29);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditCikis.EditValue = null;
+            this.dateEditCikis.Location = new System.Drawing.Point(347, 29);
+            this.dateEditCikis.Name = "dateEditCikis";
+            this.dateEditCikis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEditCikis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(130, 22);
-            this.dateEdit2.TabIndex = 21;
+            this.dateEditCikis.Size = new System.Drawing.Size(130, 22);
+            this.dateEditCikis.TabIndex = 21;
             // 
             // numericUpDown1
             // 
@@ -259,27 +259,27 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown1.TabIndex = 22;
             // 
-            // lookUpEditilce
+            // lookUpEditOdaSec
             // 
-            this.lookUpEditilce.Location = new System.Drawing.Point(343, 56);
-            this.lookUpEditilce.Name = "lookUpEditilce";
-            this.lookUpEditilce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEditOdaSec.Location = new System.Drawing.Point(343, 56);
+            this.lookUpEditOdaSec.Name = "lookUpEditOdaSec";
+            this.lookUpEditOdaSec.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditilce.Properties.DisplayMember = "İlçe";
-            this.lookUpEditilce.Properties.NullText = "İlçe Seçiniz";
-            this.lookUpEditilce.Properties.ValueMember = "Id";
-            this.lookUpEditilce.Size = new System.Drawing.Size(131, 22);
-            this.lookUpEditilce.TabIndex = 16;
+            this.lookUpEditOdaSec.Properties.DisplayMember = "OdaNo";
+            this.lookUpEditOdaSec.Properties.NullText = "Oda Seçiniz";
+            this.lookUpEditOdaSec.Properties.ValueMember = "OdaID";
+            this.lookUpEditOdaSec.Size = new System.Drawing.Size(131, 22);
+            this.lookUpEditOdaSec.TabIndex = 16;
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.pictureEdit8);
             this.groupControl2.Controls.Add(this.numericUpDown1);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.dateEdit2);
-            this.groupControl2.Controls.Add(this.lookUpEditilce);
+            this.groupControl2.Controls.Add(this.dateEditCikis);
+            this.groupControl2.Controls.Add(this.lookUpEditOdaSec);
             this.groupControl2.Controls.Add(this.pictureEdit2);
-            this.groupControl2.Controls.Add(this.dateEdit1);
+            this.groupControl2.Controls.Add(this.dateEditGiris);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.pictureEdit4);
             this.groupControl2.Controls.Add(this.pictureEdit6);
@@ -296,13 +296,13 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             this.groupControl3.Controls.Add(this.pictureEdit3);
             this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.lookUpEdit2);
+            this.groupControl3.Controls.Add(this.lookUpEditDurum);
             this.groupControl3.Controls.Add(this.pictureEdit12);
-            this.groupControl3.Controls.Add(this.labelControl12);
+            this.groupControl3.Controls.Add(this.TxtTelefon);
             this.groupControl3.Controls.Add(this.textEdit3);
             this.groupControl3.Controls.Add(this.labelControl13);
             this.groupControl3.Controls.Add(this.pictureEdit13);
-            this.groupControl3.Controls.Add(this.textEdit4);
+            this.groupControl3.Controls.Add(this.TxtRezAdSoyad);
             this.groupControl3.Location = new System.Drawing.Point(2, 162);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.ShowCaption = false;
@@ -322,13 +322,13 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.pictureEdit12.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit12.TabIndex = 6;
             // 
-            // labelControl12
+            // TxtTelefon
             // 
-            this.labelControl12.Location = new System.Drawing.Point(42, 39);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(43, 16);
-            this.labelControl12.TabIndex = 3;
-            this.labelControl12.Text = "Telefon";
+            this.TxtTelefon.Location = new System.Drawing.Point(42, 39);
+            this.TxtTelefon.Name = "TxtTelefon";
+            this.TxtTelefon.Size = new System.Drawing.Size(43, 16);
+            this.TxtTelefon.TabIndex = 3;
+            this.TxtTelefon.Text = "Telefon";
             // 
             // textEdit3
             // 
@@ -358,12 +358,12 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.pictureEdit13.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit13.TabIndex = 0;
             // 
-            // textEdit4
+            // TxtRezAdSoyad
             // 
-            this.textEdit4.Location = new System.Drawing.Point(169, 10);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(306, 22);
-            this.textEdit4.TabIndex = 1;
+            this.TxtRezAdSoyad.Location = new System.Drawing.Point(169, 10);
+            this.TxtRezAdSoyad.Name = "TxtRezAdSoyad";
+            this.TxtRezAdSoyad.Size = new System.Drawing.Size(306, 22);
+            this.TxtRezAdSoyad.TabIndex = 1;
             // 
             // pictureEdit3
             // 
@@ -386,17 +386,17 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.labelControl3.TabIndex = 28;
             this.labelControl3.Text = "Durum";
             // 
-            // lookUpEdit2
+            // lookUpEditDurum
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(336, 37);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEditDurum.Location = new System.Drawing.Point(336, 37);
+            this.lookUpEditDurum.Name = "lookUpEditDurum";
+            this.lookUpEditDurum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Properties.DisplayMember = "İlçe";
-            this.lookUpEdit2.Properties.NullText = "İlçe Seçiniz";
-            this.lookUpEdit2.Properties.ValueMember = "Id";
-            this.lookUpEdit2.Size = new System.Drawing.Size(131, 22);
-            this.lookUpEdit2.TabIndex = 27;
+            this.lookUpEditDurum.Properties.DisplayMember = "DurumAd";
+            this.lookUpEditDurum.Properties.NullText = "Durum Seçiniz";
+            this.lookUpEditDurum.Properties.ValueMember = "DurumID";
+            this.lookUpEditDurum.Size = new System.Drawing.Size(131, 22);
+            this.lookUpEditDurum.TabIndex = 27;
             // 
             // groupControl4
             // 
@@ -427,6 +427,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.BtnKaydet.Size = new System.Drawing.Size(143, 49);
             this.BtnKaydet.TabIndex = 1;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnVazgec
             // 
@@ -436,6 +437,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.BtnVazgec.Size = new System.Drawing.Size(143, 49);
             this.BtnVazgec.TabIndex = 0;
             this.BtnVazgec.Text = "Vazgeç";
+            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgec_Click);
             // 
             // groupControl5
             // 
@@ -505,6 +507,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.Name = "FrmRezervasyonKarti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rezervasyon Kartı";
+            this.Load += new System.EventHandler(this.FrmRezervasyonKarti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
@@ -513,13 +516,13 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMisafir.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditilce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditOdaSec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -529,9 +532,9 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRezAdSoyad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDurum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -557,21 +560,21 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEditilce;
+        private DevExpress.XtraEditors.DateEdit dateEditCikis;
+        private DevExpress.XtraEditors.DateEdit dateEditGiris;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditMisafir;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditOdaSec;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditDurum;
         private DevExpress.XtraEditors.PictureEdit pictureEdit12;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.LabelControl TxtTelefon;
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.PictureEdit pictureEdit13;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit TxtRezAdSoyad;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
