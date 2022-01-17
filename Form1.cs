@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using OtelRezervasyonDevEx.Formlar.Misafir;
 using OtelRezervasyonDevEx.Formlar.Personel;
+using OtelRezervasyonDevEx.Formlar.Rezervasyon;
 using OtelRezervasyonDevEx.Formlar.Tanımlamalar;
 using OtelRezervasyonDevEx.Formlar.Urun;
 
@@ -141,6 +142,14 @@ namespace OtelRezervasyonDevEx
         private void BtnYeniUrunHareketi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmUrunHareketTanimi fr = new FrmUrunHareketTanimi();
+            fr.Show();
+        }
+
+        private void barButtonItem4_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            // Rezervasyon Kartı 
+
+            FrmRezervasyonKarti fr = new FrmRezervasyonKarti();
             fr.Show();
         }
     }
