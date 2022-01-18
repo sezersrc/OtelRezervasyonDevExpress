@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using OtelRezervasyonDevEx.Formlar.Araclar;
 using OtelRezervasyonDevEx.Formlar.Misafir;
 using OtelRezervasyonDevEx.Formlar.Personel;
 using OtelRezervasyonDevEx.Formlar.Rezervasyon;
@@ -188,6 +189,43 @@ namespace OtelRezervasyonDevEx
             fr.MdiParent = this;
             fr.Show();
 
+        }
+
+        private void BtnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void BtnHesapMakinesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void BtnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
+
+        private void BtnKurlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            // Banka yada Referasn alınan kurum kurları
+            FrmKurlar fr = new FrmKurlar();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmYoutube fr = new FrmYoutube();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGoogle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmGoogle fr = new FrmGoogle();
+            fr.MdiParent = this;
+            fr.Show();
         }
     }
 }
