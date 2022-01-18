@@ -1,5 +1,4 @@
-﻿
-namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
+﻿namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
 {
     partial class FrmGecmisRezervasyonlar
     {
@@ -42,7 +41,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1032, 185);
-            this.gridControl1.TabIndex = 4;
+            this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -50,6 +49,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // FrmGecmisRezervasyonlar
             // 
@@ -59,6 +59,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmGecmisRezervasyonlar";
             this.Text = "Geçmiş Rezervasyonlar";
+            this.Load += new System.EventHandler(this.FrmGecmisRezervasyonlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

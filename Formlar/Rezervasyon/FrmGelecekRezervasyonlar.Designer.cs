@@ -1,5 +1,4 @@
-﻿
-namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
+﻿namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
 {
     partial class FrmGelecekRezervasyonlar
     {
@@ -41,8 +40,8 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(800, 450);
-            this.gridControl1.TabIndex = 4;
+            this.gridControl1.Size = new System.Drawing.Size(1032, 185);
+            this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -50,15 +49,17 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // FrmGelecekRezervasyonlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1032, 185);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmGelecekRezervasyonlar";
-            this.Text = "FrmGelecekRezervasyonlar";
+            this.Text = "Gelecek Rezervasyonlar";
+            this.Load += new System.EventHandler(this.FrmGelecekRezervasyonlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

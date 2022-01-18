@@ -1,5 +1,4 @@
-﻿
-namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
+﻿namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
 {
     partial class FrmAktifRezervasyonlar
     {
@@ -50,6 +49,7 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // FrmAktifRezervasyonlar
             // 
@@ -58,7 +58,8 @@ namespace OtelRezervasyonDevEx.Formlar.Rezervasyon
             this.ClientSize = new System.Drawing.Size(1032, 185);
             this.Controls.Add(this.gridControl1);
             this.Name = "FrmAktifRezervasyonlar";
-            this.Text = "Aktif Rezervasyonlar";
+            this.Text = "FrmAktifRezervasyonlar";
+            this.Load += new System.EventHandler(this.FrmAktifRezervasyonlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

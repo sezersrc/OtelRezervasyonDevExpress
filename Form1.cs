@@ -152,5 +152,42 @@ namespace OtelRezervasyonDevEx
             FrmRezervasyonKarti fr = new FrmRezervasyonKarti();
             fr.Show();
         }
+
+        private void BtnRezervasysonListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmTumRezervasyonlar fr = new FrmTumRezervasyonlar();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnAktifRezervasyonlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmAktifRezervasyonlar fr = new FrmAktifRezervasyonlar();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnIptalEdilenRezervasyonlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            FrmIptalEdilenRezervasyonlar fr = new FrmIptalEdilenRezervasyonlar();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGecmisRezervasyon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmGecmisRezervasyonlar fr = new FrmGecmisRezervasyonlar();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGelecekRezervasyon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmGelecekRezervasyonlar fr = new FrmGelecekRezervasyonlar();
+            fr.MdiParent = this;
+            fr.Show();
+
+        }
     }
 }
