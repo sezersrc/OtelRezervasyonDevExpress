@@ -27,25 +27,33 @@ namespace OtelRezervasyonDevEx.Formlar.Personel
         private void FrmPersonelKarti_Load(object sender, EventArgs e)
         {
             this.Text = id.ToString();
-            if (id!=0)
+            try
             {
-                var personel = repo.Find(x => x.PersonelID == id);
-                TxtAdSoyad.Text = personel.AdSoyad;
-                TxtTcKimlikNo.Text = personel.TC;
-                TxtAdres.Text = personel.Adres;
-                TxtTelefon.Text = personel.Telefon;
-                TxtEmail.Text = personel.Mail;
-                dateEditGiris.Text = personel.IseGirisTarih.ToString();
-                dateEditCikis.Text = personel.IstenCikisTarihi.ToString();
-                txtAciklama.Text = personel.Aciklama;
-                TxtSifre.Text = personel.Sifre;
-                pictureEditKimlikOn.Image = Image.FromFile(personel.KimlikOn);
-                pictureEditKimlikArka.Image = Image.FromFile(personel.KimlikArka);
-                LblConOn.Text = personel.KimlikOn;
-                LblConArka.Text = personel.KimlikArka;
-                lookUpEditDepartman.EditValue = personel.Departman;
-                lookUpEditGorev.EditValue = personel.Gorev;
+                if (id!=0)
+                {
+                    var personel = repo.Find(x => x.PersonelID == id);
+                    TxtAdSoyad.Text = personel.AdSoyad;
+                    TxtTcKimlikNo.Text = personel.TC;
+                    TxtAdres.Text = personel.Adres;
+                    TxtTelefon.Text = personel.Telefon;
+                    TxtEmail.Text = personel.Mail;
+                    dateEditGiris.Text = personel.IseGirisTarih.ToString();
+                    dateEditCikis.Text = personel.IstenCikisTarihi.ToString();
+                    txtAciklama.Text = personel.Aciklama;
+                    TxtSifre.Text = personel.Sifre;
+                    pictureEditKimlikOn.Image = Image.FromFile(personel.KimlikOn);
+                    pictureEditKimlikArka.Image = Image.FromFile(personel.KimlikArka);
+                    LblConOn.Text = personel.KimlikOn;
+                    LblConArka.Text = personel.KimlikArka;
+                    lookUpEditDepartman.EditValue = personel.Departman;
+                    lookUpEditGorev.EditValue = personel.Gorev;
 
+                }
+            }
+            catch (Exception )
+            {
+                XtraMessageBox.Show("Bir Hata Oluştu Lütfen verileri kontrol edin!", "Hata", MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop);
             }
 
 
