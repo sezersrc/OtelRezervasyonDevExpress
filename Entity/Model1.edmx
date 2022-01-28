@@ -145,8 +145,10 @@
           <Property Name="GirisTarih" Type="date" />
           <Property Name="CikisTarih" Type="date" />
           <Property Name="KisiSayisi" Type="char" MaxLength="1" />
+          <Property Name="Kisi2" Type="int" />
+          <Property Name="Kisi3" Type="int" />
+          <Property Name="Kisi4" Type="int" />
           <Property Name="Oda" Type="int" />
-          <Property Name="RezervasyonAdSoyad" Type="nvarchar" MaxLength="30" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Aciklama" Type="nvarchar" MaxLength="500" />
           <Property Name="Durum" Type="int" />
@@ -1145,7 +1147,7 @@
             <End Role="TblOda" EntitySet="TblOda" />
             <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -1278,8 +1280,10 @@
           <Property Name="GirisTarih" Type="DateTime" Precision="0" />
           <Property Name="CikisTarih" Type="DateTime" Precision="0" />
           <Property Name="KisiSayisi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Kisi2" Type="Int32" />
+          <Property Name="Kisi3" Type="Int32" />
+          <Property Name="Kisi4" Type="Int32" />
           <Property Name="Oda" Type="Int32" />
-          <Property Name="RezervasyonAdSoyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Durum" Type="Int32" />
@@ -1323,7 +1327,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1532,8 +1536,10 @@
                 <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="RezervasyonAdSoyad" ColumnName="RezervasyonAdSoyad" />
                 <ScalarProperty Name="Oda" ColumnName="Oda" />
+                <ScalarProperty Name="Kisi4" ColumnName="Kisi4" />
+                <ScalarProperty Name="Kisi3" ColumnName="Kisi3" />
+                <ScalarProperty Name="Kisi2" ColumnName="Kisi2" />
                 <ScalarProperty Name="KisiSayisi" ColumnName="KisiSayisi" />
                 <ScalarProperty Name="CikisTarih" ColumnName="CikisTarih" />
                 <ScalarProperty Name="GirisTarih" ColumnName="GirisTarih" />

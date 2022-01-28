@@ -19,8 +19,10 @@ namespace OtelRezervasyonDevEx.Entity
         public Nullable<System.DateTime> GirisTarih { get; set; }
         public Nullable<System.DateTime> CikisTarih { get; set; }
         public string KisiSayisi { get; set; }
+        public Nullable<int> Kisi2 { get; set; }
+        public Nullable<int> Kisi3 { get; set; }
+        public Nullable<int> Kisi4 { get; set; }
         public Nullable<int> Oda { get; set; }
-        public string RezervasyonAdSoyad { get; set; }
         public string Telefon { get; set; }
         public string Aciklama { get; set; }
         public Nullable<int> Durum { get; set; }

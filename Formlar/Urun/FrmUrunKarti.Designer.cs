@@ -31,6 +31,14 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUrunKarti));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtKdv = new DevExpress.XtraEditors.TextEdit();
+            this.Rdb4 = new System.Windows.Forms.RadioButton();
+            this.Rdb3 = new System.Windows.Forms.RadioButton();
+            this.Rdb2 = new System.Windows.Forms.RadioButton();
+            this.Rdb1 = new System.Windows.Forms.RadioButton();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtToplam = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -39,18 +47,10 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtUrunAd = new DevExpress.XtraEditors.TextEdit();
-            this.TxtToplam = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.TxtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
-            this.Rdb1 = new System.Windows.Forms.RadioButton();
-            this.Rdb2 = new System.Windows.Forms.RadioButton();
-            this.Rdb3 = new System.Windows.Forms.RadioButton();
-            this.Rdb4 = new System.Windows.Forms.RadioButton();
-            this.TxtKdv = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -67,18 +67,18 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             this.BtnVazgec = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFiyat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUrunAd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -114,6 +114,90 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(493, 104);
             this.groupControl1.TabIndex = 6;
+            // 
+            // TxtKdv
+            // 
+            this.TxtKdv.Location = new System.Drawing.Point(91, 64);
+            this.TxtKdv.Name = "TxtKdv";
+            this.TxtKdv.Size = new System.Drawing.Size(131, 22);
+            this.TxtKdv.TabIndex = 26;
+            this.TxtKdv.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+            // 
+            // Rdb4
+            // 
+            this.Rdb4.AutoSize = true;
+            this.Rdb4.Location = new System.Drawing.Point(415, 63);
+            this.Rdb4.Name = "Rdb4";
+            this.Rdb4.Size = new System.Drawing.Size(59, 21);
+            this.Rdb4.TabIndex = 25;
+            this.Rdb4.TabStop = true;
+            this.Rdb4.Text = "%18";
+            this.Rdb4.UseVisualStyleBackColor = true;
+            this.Rdb4.CheckedChanged += new System.EventHandler(this.Rdb4_CheckedChanged);
+            // 
+            // Rdb3
+            // 
+            this.Rdb3.AutoSize = true;
+            this.Rdb3.Location = new System.Drawing.Point(350, 63);
+            this.Rdb3.Name = "Rdb3";
+            this.Rdb3.Size = new System.Drawing.Size(59, 21);
+            this.Rdb3.TabIndex = 24;
+            this.Rdb3.TabStop = true;
+            this.Rdb3.Text = "%10";
+            this.Rdb3.UseVisualStyleBackColor = true;
+            this.Rdb3.CheckedChanged += new System.EventHandler(this.Rdb3_CheckedChanged);
+            // 
+            // Rdb2
+            // 
+            this.Rdb2.AutoSize = true;
+            this.Rdb2.Location = new System.Drawing.Point(293, 65);
+            this.Rdb2.Name = "Rdb2";
+            this.Rdb2.Size = new System.Drawing.Size(51, 21);
+            this.Rdb2.TabIndex = 23;
+            this.Rdb2.TabStop = true;
+            this.Rdb2.Text = "%8";
+            this.Rdb2.UseVisualStyleBackColor = true;
+            this.Rdb2.CheckedChanged += new System.EventHandler(this.Rdb2_CheckedChanged);
+            // 
+            // Rdb1
+            // 
+            this.Rdb1.AutoSize = true;
+            this.Rdb1.Location = new System.Drawing.Point(233, 65);
+            this.Rdb1.Name = "Rdb1";
+            this.Rdb1.Size = new System.Drawing.Size(51, 21);
+            this.Rdb1.TabIndex = 22;
+            this.Rdb1.TabStop = true;
+            this.Rdb1.Text = "%1";
+            this.Rdb1.UseVisualStyleBackColor = true;
+            this.Rdb1.CheckedChanged += new System.EventHandler(this.Rdb1_CheckedChanged);
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(9, 63);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit3.TabIndex = 21;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(60, 65);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(21, 16);
+            this.labelControl3.TabIndex = 20;
+            this.labelControl3.Text = "Kdv";
+            // 
+            // TxtToplam
+            // 
+            this.TxtToplam.Location = new System.Drawing.Point(343, 38);
+            this.TxtToplam.Name = "TxtToplam";
+            this.TxtToplam.Size = new System.Drawing.Size(131, 22);
+            this.TxtToplam.TabIndex = 19;
             // 
             // pictureEdit4
             // 
@@ -192,34 +276,6 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             this.TxtUrunAd.Size = new System.Drawing.Size(384, 22);
             this.TxtUrunAd.TabIndex = 1;
             // 
-            // TxtToplam
-            // 
-            this.TxtToplam.Location = new System.Drawing.Point(343, 38);
-            this.TxtToplam.Name = "TxtToplam";
-            this.TxtToplam.Size = new System.Drawing.Size(131, 22);
-            this.TxtToplam.TabIndex = 19;
-            // 
-            // pictureEdit3
-            // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(9, 63);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit3.TabIndex = 21;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(60, 65);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(21, 16);
-            this.labelControl3.TabIndex = 20;
-            this.labelControl3.Text = "Kdv";
-            // 
             // groupControl5
             // 
             this.groupControl5.Controls.Add(this.TxtAciklama);
@@ -259,58 +315,6 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             this.pictureEdit11.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit11.Size = new System.Drawing.Size(30, 28);
             this.pictureEdit11.TabIndex = 6;
-            // 
-            // Rdb1
-            // 
-            this.Rdb1.AutoSize = true;
-            this.Rdb1.Location = new System.Drawing.Point(233, 65);
-            this.Rdb1.Name = "Rdb1";
-            this.Rdb1.Size = new System.Drawing.Size(51, 21);
-            this.Rdb1.TabIndex = 22;
-            this.Rdb1.TabStop = true;
-            this.Rdb1.Text = "%1";
-            this.Rdb1.UseVisualStyleBackColor = true;
-            // 
-            // Rdb2
-            // 
-            this.Rdb2.AutoSize = true;
-            this.Rdb2.Location = new System.Drawing.Point(293, 65);
-            this.Rdb2.Name = "Rdb2";
-            this.Rdb2.Size = new System.Drawing.Size(51, 21);
-            this.Rdb2.TabIndex = 23;
-            this.Rdb2.TabStop = true;
-            this.Rdb2.Text = "%8";
-            this.Rdb2.UseVisualStyleBackColor = true;
-            // 
-            // Rdb3
-            // 
-            this.Rdb3.AutoSize = true;
-            this.Rdb3.Location = new System.Drawing.Point(350, 63);
-            this.Rdb3.Name = "Rdb3";
-            this.Rdb3.Size = new System.Drawing.Size(59, 21);
-            this.Rdb3.TabIndex = 24;
-            this.Rdb3.TabStop = true;
-            this.Rdb3.Text = "%10";
-            this.Rdb3.UseVisualStyleBackColor = true;
-            // 
-            // Rdb4
-            // 
-            this.Rdb4.AutoSize = true;
-            this.Rdb4.Location = new System.Drawing.Point(415, 63);
-            this.Rdb4.Name = "Rdb4";
-            this.Rdb4.Size = new System.Drawing.Size(59, 21);
-            this.Rdb4.TabIndex = 25;
-            this.Rdb4.TabStop = true;
-            this.Rdb4.Text = "%18";
-            this.Rdb4.UseVisualStyleBackColor = true;
-            // 
-            // TxtKdv
-            // 
-            this.TxtKdv.Location = new System.Drawing.Point(91, 64);
-            this.TxtKdv.Name = "TxtKdv";
-            this.TxtKdv.Size = new System.Drawing.Size(131, 22);
-            this.TxtKdv.TabIndex = 26;
-            this.TxtKdv.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
             // 
             // groupControl2
             // 
@@ -489,19 +493,19 @@ namespace OtelRezervasyonDevEx.Formlar.Urun
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFiyat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUrunAd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtToplam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtKdv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
