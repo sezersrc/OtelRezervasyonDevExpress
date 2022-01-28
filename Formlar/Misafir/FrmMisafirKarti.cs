@@ -24,41 +24,50 @@ namespace OtelRezervasyonDevEx.Formlar.Misafir
         {
             TxtAdSoyad.Text = id.ToString();
             // Güncellenecek Kart Bilgileri
-            if (id != 0)
+
+            try
             {
-                var misafir = repo.Find(x => x.MisafirID == id);
-                TxtAdSoyad.Text = misafir.AdSoyad;
-                TxtTcKimlikNo.Text = misafir.TC;
-                TxtAdres.Text = misafir.Adres;
-                TxtTelefon.Text = misafir.Telefon;
-                TxtEmail.Text = misafir.Mail;
-                txtAciklama.Text = misafir.Aciklama;
-                pictureEditKimlikOn.Image = Image.FromFile(misafir.KimlikFoto1);
-                pictureEditKimlikArka.Image = Image.FromFile(misafir.KimlikFoto2);
-                resim1 = misafir.KimlikFoto1;
-                resim2 = misafir.KimlikFoto2;
-                lookUpEditil.EditValue = misafir.Sehir;
-                lookUpEditUlke.EditValue = misafir.Ulke;
-                lookUpEditilce.EditValue = misafir.ilce;
+                if (id != 0)
+                {
+                    var misafir = repo.Find(x => x.MisafirID == id);
+                    TxtAdSoyad.Text = misafir.AdSoyad;
+                    TxtTcKimlikNo.Text = misafir.TC;
+                    TxtAdres.Text = misafir.Adres;
+                    TxtTelefon.Text = misafir.Telefon;
+                    TxtEmail.Text = misafir.Mail;
+                    txtAciklama.Text = misafir.Aciklama;
+                    pictureEditKimlikOn.Image = Image.FromFile(misafir.KimlikFoto1);
+                    pictureEditKimlikArka.Image = Image.FromFile(misafir.KimlikFoto2);
+                    resim1 = misafir.KimlikFoto1;
+                    resim2 = misafir.KimlikFoto2;
+                    lookUpEditil.EditValue = misafir.Sehir;
+                    lookUpEditUlke.EditValue = misafir.Ulke;
+                    lookUpEditilce.EditValue = misafir.ilce;
+                    
 
+                }
             }
-
+            catch (Exception )
+            {
+                XtraMessageBox.Show("Bir Hata Oluştu Lütfen verileri kontrol edin!", "Hata", MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop);
+            }
             // Ülke Listesi
             lookUpEditUlke.Properties.DataSource = (from x in db.TblUlke
-                                                    select new
-                                                    {
-                                                        x.UlkeID,
-                                                        x.UlkeAd
-                                                    }).ToList();
+                select new
+                {
+                    x.UlkeID,
+                    x.UlkeAd
+                }).ToList();
 
 
             // ŞEhir Listesi
             lookUpEditil.Properties.DataSource = (from x in db.iller
-                                                  select new
-                                                  {
-                                                      Id = x.id,
-                                                      Şehir = x.sehir
-                                                  }).ToList();
+                select new
+                {
+                    Id = x.id,
+                    Şehir = x.sehir
+                }).ToList();
 
         }
 
