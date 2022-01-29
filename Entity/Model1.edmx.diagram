@@ -49,6 +49,7 @@
         <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblDurum" />
         <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblMisafir" />
         <AssociationConnector Association="DbOtelDevExModel.FK_TblRezervasyon_TblOda" />
+        <EntityTypeShape EntityType="DbOtelDevExModel.TblWebKayit" Width="1.5" PointX="5.375" PointY="3.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

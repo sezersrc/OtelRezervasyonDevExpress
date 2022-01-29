@@ -5,6 +5,7 @@ using OtelRezervasyonDevEx.Formlar.Personel;
 using OtelRezervasyonDevEx.Formlar.Rezervasyon;
 using OtelRezervasyonDevEx.Formlar.Tanımlamalar;
 using OtelRezervasyonDevEx.Formlar.Urun;
+using OtelRezervasyonDevEx.Formlar.WebSite;
 
 namespace OtelRezervasyonDevEx
 {
@@ -226,6 +227,15 @@ namespace OtelRezervasyonDevEx
             FrmGoogle fr = new FrmGoogle();
             fr.MdiParent = this;
             fr.Show();
+        }
+
+        private void barButtonItem4_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        { //btnwebkayit
+            // Test
+            FrmYeniKayit fr = new FrmYeniKayit();
+            fr.MdiParent=this;
+            fr.Show();
+
         }
     }
 }
