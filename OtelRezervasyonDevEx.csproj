@@ -134,6 +134,9 @@
     <Compile Include="Entity\TblOda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TblOnRezervasyon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TblPersonel.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -338,6 +341,18 @@
     <Compile Include="Formlar\Urun\FrmUrunListesi.Designer.cs">
       <DependentUpon>FrmUrunListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\WebSite\FrmOnRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\WebSite\FrmOnRezervasyon.Designer.cs">
+      <DependentUpon>FrmOnRezervasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\WebSite\FrmOnRezervasyonKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\WebSite\FrmOnRezervasyonKarti.Designer.cs">
+      <DependentUpon>FrmOnRezervasyonKarti.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\WebSite\FrmYeniKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -436,6 +451,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Urun\FrmUrunListesi.resx">
       <DependentUpon>FrmUrunListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\WebSite\FrmOnRezervasyon.resx">
+      <DependentUpon>FrmOnRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\WebSite\FrmYeniKayit.resx">
       <DependentUpon>FrmYeniKayit.cs</DependentUpon>

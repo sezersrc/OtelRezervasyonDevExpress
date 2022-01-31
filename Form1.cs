@@ -237,5 +237,12 @@ namespace OtelRezervasyonDevEx
             fr.Show();
 
         }
+
+        private void BtnOnRezervasyonlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmOnRezervasyon fr = new FrmOnRezervasyon();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

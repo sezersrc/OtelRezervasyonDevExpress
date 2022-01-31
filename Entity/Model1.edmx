@@ -115,6 +115,20 @@
           <Property Name="Telefon" Type="char" MaxLength="4" />
           <Property Name="Durum" Type="int" />
         </EntityType>
+        <EntityType Name="TblOnRezervasyon">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="GirisTarih" Type="date" />
+          <Property Name="CikisTarih" Type="date" />
+          <Property Name="Kisi" Type="nvarchar" MaxLength="1" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tarih" Type="date" />
+        </EntityType>
         <EntityType Name="TblPersonel">
           <Key>
             <PropertyRef Name="PersonelID" />
@@ -536,6 +550,7 @@
           <EntitySet Name="TblKur" EntityType="Self.TblKur" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMisafir" EntityType="Self.TblMisafir" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblOda" EntityType="Self.TblOda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblOnRezervasyon" EntityType="Self.TblOnRezervasyon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblRezervasyon" EntityType="Self.TblRezervasyon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTelefon" EntityType="Self.TblTelefon" Schema="dbo" store:Type="Tables" />
@@ -1159,6 +1174,7 @@
             <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
           </AssociationSet>
           <EntitySet Name="TblWebKayit" EntityType="DbOtelDevExModel.TblWebKayit" />
+          <EntitySet Name="TblOnRezervasyon" EntityType="DbOtelDevExModel.TblOnRezervasyon" />
           </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -1348,6 +1364,20 @@
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblOnRezervasyon">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GirisTarih" Type="DateTime" Precision="0" />
+          <Property Name="CikisTarih" Type="DateTime" Precision="0" />
+          <Property Name="Kisi" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1577,6 +1607,21 @@
                 <ScalarProperty Name="Telefon" ColumnName="Telefon" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblOnRezervasyon">
+            <EntityTypeMapping TypeName="DbOtelDevExModel.TblOnRezervasyon">
+              <MappingFragment StoreEntitySet="TblOnRezervasyon">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Kisi" ColumnName="Kisi" />
+                <ScalarProperty Name="CikisTarih" ColumnName="CikisTarih" />
+                <ScalarProperty Name="GirisTarih" ColumnName="GirisTarih" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
